@@ -1,6 +1,7 @@
 #!/bin/env python
 
 import argparse
+import time
 import random
 
 def do_game(do_change):
@@ -28,7 +29,7 @@ if __name__ == "__main__":
         game = 0
         nr_win = 0
         nr_lose = 0
-        random.seed(42)
+        random.seed(time.time())
 
         while True:
             game += 1
