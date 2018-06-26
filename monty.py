@@ -40,6 +40,6 @@ if __name__ == "__main__":
                 nr_win += 1
             else:
                 nr_lose += 1
-        print "strategy: %s:\t%5d wins, %5d lose (%.4f win probability)" % (
-                "change" if change else "no_change", nr_win, nr_lose,
+        print "%s strategy:\t%5d wins, %5d lose (%.4f win probability)" % (
+                "change" if change else "no change", nr_win, nr_lose,
                 float(nr_win) / nr_games)
