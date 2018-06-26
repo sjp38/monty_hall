@@ -1,5 +1,6 @@
 #!/bin/env python
 
+import argparse
 import random
 import sys
 
@@ -18,8 +19,11 @@ def do_game(do_change):
     return False
 
 if __name__ == "__main__":
-    nr_games = int(sys.argv[1])
-    print("do %d games" % nr_games)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--nr_games', '-n', type=int, metavar='<N>',
+            default=100, help='Number of games to play')
+    args = parser.parse_args()
+    nr_games = args.nr_games
 
     for change in [True, False]:
         game = 0
