@@ -2,7 +2,6 @@
 
 import argparse
 import random
-import sys
 
 def do_game(do_change):
     "Returns true for win, false for lose"
